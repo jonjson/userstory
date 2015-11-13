@@ -1,5 +1,5 @@
 var User = require('../models/user');
-var Story - require('../models/story');
+var Story = require('../models/story');
 
 var config = require('../../config');
 
@@ -9,7 +9,7 @@ var jsonwebtoken = require('jsonwebtoken');
 
 function createToken(user){
 	var token = jsonwebtoken.sign({
-		_id: user._id,
+		id: user._id,
 		name: user.name,
 		username: user.username
 	}, secretKey, {
